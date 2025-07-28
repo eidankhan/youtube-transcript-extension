@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <title>YouTube Transcript Extractor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 12px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .transcript-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .button-container {
+      display: flex;
+      gap: 8px;
+    }
+    .button {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .video-info, .transcript-box {
+      background: white;
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .languages-box {
+      margin-bottom: 8px;
+    }
+    .message {
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+    }
+    .mode-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .mode-toggle label {
+      font-size: 0.85rem;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="transcript-header">
+      <div class="header-title">Transcript Extractor</div>
+      <div class="button-container">
+        <!-- <button id="extract-transcript" class="button">Get Transcript</button> -->
+        <button id="copy-transcript" class="button">Copy</button>
+      </div>
+    </div>
+    
+    <!-- <div class="mode-toggle">
+      <label for="dark-mode-toggle">Dark Mode</label>
+      <input type="checkbox" id="dark-mode-toggle" />
+    </div> -->
+    
+    <div id="video-info" class="video-info">
+      <div class="languages-box">
+        <div id="transcript-languages"></div>
+      </div>
+    </div>
+
+    <div id="transcript-output" class="transcript-box"></div>
+    <p id="message" class="message"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
